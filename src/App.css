@@ -1,42 +1,93 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body, html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  background-color: #ebebeb;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+.body-container {
+  height: 2000px;
+}
+
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style the navigation bar */
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 15px 20px;
+  transition: 0.5s;
+
+  width: 100%;
+}
+
+/* Style the logo */
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  display: block;
+  margin: auto;
+  height: 120px;
+  transition: 0.5s;
+  cursor: pointer;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Style the navigation links */
+.nav-links {
+  display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.nav-links li {
+  margin-right: 50px;
 }
 
-.card {
-  padding: 2em;
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
-.read-the-docs {
-  color: #888;
+.nav-links a:hover {
+  color: #ff6b6b;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+  gap: 10px; /* Spacing between photos */
+  max-width: 800px; /* Set a maximum width for the gallery */
+  margin: 0 auto; /* Center the gallery horizontally */
+}
+
+.photo {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.photo:hover img {
+  transform: scale(1.1); /* Zoom in on hover */
 }
