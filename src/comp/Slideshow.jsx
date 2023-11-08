@@ -26,7 +26,7 @@ function Slideshow() {
     <div className="slideshow">
       <div className='floating-box'>
         <h1>Welcome!</h1>
-        <h2>We are the well-esteemed family-oriented pumpkin patch of Rigby, Idaho</h2>
+        <h2>We are the world-renowned family-oriented pumpkin patch of Rigby, Idaho</h2>
       </div>
       <img src={images[currentImageIndex]} alt="Slideshow" />
     </div>
