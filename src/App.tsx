@@ -17,7 +17,7 @@ function App() {
     }
 
     if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
-      document.getElementById("navbar").style.backgroundColor = "rgba(255, 255, 255, .7)";
+      document.getElementById("navbar").style.backgroundColor = "rgba(255, 255, 255, .9)";
     } else {
       document.getElementById("navbar").style.backgroundColor = "rgba(255, 255, 255, 1)";
     }
@@ -38,7 +38,7 @@ function App() {
     <div>
       <BrowserRouter>
         <nav id='navbar' className="navbar">
-          <img id='logo' className='logo' src='./src/logo.png' alt="Logo" />
+          <Link to="/"><img id='logo' className='logo' src='./src/logo.png' alt="Logo" /></Link>
 
           <ul className='nav-links'>
             <li><Link to="/">HOME</Link></li>
